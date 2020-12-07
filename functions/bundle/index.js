@@ -1,4 +1,3 @@
-
 const { createLocalServer } = require("./server")
 
 const server = createLocalServer();
