@@ -1,7 +1,8 @@
 {
   "name": "serverless-graphql-netlify-starter",
   "version": "1.0.0",
-  "description": "The simplest serverless GraphQL API deployed on Netlify possible.",
+	"description": "The simplest serverless GraphQL API deployed on Netlify possible.",
+	"type": "module",
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
