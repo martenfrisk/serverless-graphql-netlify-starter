@@ -26,12 +26,20 @@
   },
   "homepage": "https://github.com/stemmlerjs/serverless-graphql-netlify-starter#readme",
   "dependencies": {
-    "apollo-server": "^2.10.1",
+    "apollo-server": "^2.19.0",
     "apollo-server-lambda": "^2.10.1",
+    "axios": "^0.21.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "cpx": "^1.5.0",
-    "graphql-depth-limit": "^1.1.0"
+    "esm": "^3.2.25",
+    "graphql": "^15.4.0",
+    "graphql-depth-limit": "^1.1.0",
+    "netlify-lambda": "^2.0.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.6"
   }
 }
