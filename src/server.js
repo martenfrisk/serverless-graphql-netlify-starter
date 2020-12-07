@@ -1,9 +1,9 @@
-const ApolloServer = require('apollo-server').ApolloServer
-const depthLimit = require('graphql-depth-limit')
-const resolvers = require('./resolvers')
-const typeDefs = require('./resources')
-const errorFormatter = require('./errors/ErrorFormatter')
-const ApolloServerLambda = require('apollo-server-lambda').ApolloServer
+import { ApolloServer } from 'apollo-server'
+import depthLimit from 'graphql-depth-limit'
+import resolvers from './resolvers'
+import typeDefs from './resources'
+import errorFormatter from './errors/ErrorFormatter'
+import { ApolloServer as ApolloServerLambda } from 'apollo-server-lambda'
 
 
 const apiKey = process.env.API_KEY || '1';
@@ -12,7 +12,7 @@ const validationRules = [
 	depthLimit(3),
 ];
 
-function createLambdaServer () {
+export function createLambdaServer () {
   return new ApolloServerLambda({
     typeDefs,
     resolvers,
@@ -26,7 +26,7 @@ function createLambdaServer () {
   });
 }
 
-function createLocalServer () {
+export function createLocalServer () {
   return new ApolloServer({
     typeDefs,
     resolvers,
@@ -39,5 +39,3 @@ function createLocalServer () {
     playground: true,
   });
 }
-
-module.exports = { createLambdaServer, createLocalServer }
